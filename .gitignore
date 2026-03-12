@@ -26,3 +26,8 @@ dist-ssr
 # Tauri
 src-tauri/target
 src-tauri/Cargo.lock
+
+# Large DLL files
+src-tauri/lib/*.dll
+libmpv/bin/*.dll
+*.dll
