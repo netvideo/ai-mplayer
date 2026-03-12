@@ -1,0 +1,4 @@
+[[permission]]
+identifier = "allow-get-window-hwnd"
+description = "Allow getting window hwnd"
+commands.allow = ["get_window_hwnd"]

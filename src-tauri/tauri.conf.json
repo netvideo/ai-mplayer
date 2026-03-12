@@ -1,0 +1,51 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build",
+    "devUrl": "http://localhost:3001",
+    "frontendDist": "../dist"
+  },
+  "productName": "ai-mplayer",
+  "version": "1.0.0",
+  "identifier": "com.ai-mplayer.app",
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "resources": [
+      "lib/**/*"
+    ]
+  },
+  "app": {
+    "windows": [
+      {
+        "label": "main",
+        "title": "ai-mplayer - 智能播放器",
+        "width": 1280,
+        "height": 720,
+        "resizable": true,
+        "fullscreen": false,
+        "transparent": true,
+        "decorations": true,
+        "visible": true,
+        "focus": true
+      }
+    ],
+"security": {
+        "csp": null,
+        "assetProtocol": {
+          "enable": true,
+          "scope": ["**"]
+        }
+      },
+    "withGlobalTauri": true
+  },
+  "plugins": {}
+}

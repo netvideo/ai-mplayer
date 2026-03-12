@@ -1,0 +1,57 @@
+export default {
+  app: {
+    title: 'ai-mplayer Smart Player',
+  },
+  player: {
+    openFile: 'Open File',
+    openUrl: 'Open URL',
+    play: 'Play',
+    pause: 'Pause',
+    stop: 'Stop',
+    volume: 'Volume',
+    fullscreen: 'Fullscreen',
+    settings: 'Settings',
+    help: 'Help',
+  },
+  subtitles: {
+    title: 'Subtitle Settings',
+    enable: 'Enable Subtitles',
+    track: 'Subtitle Track',
+    external: 'External Subtitles',
+    internal: 'Internal Subtitles',
+    asr: 'ASR Subtitles',
+    translation: 'Subtitle Translation',
+    translateTo: 'Translate To',
+  },
+  decoder: {
+    unsupportedFormat: 'Unsupported Format',
+    installDecoder: 'Install Decoder',
+    installPrompt: 'Unsupported media format detected. Install corresponding decoder?',
+  },
+  ai: {
+    enhancement: 'AI Enhancement',
+    asr: 'AI Speech Recognition',
+    translation: 'AI Translation',
+    localModel: 'Local Model',
+    cloudModel: 'Cloud Model',
+  },
+  danmaku: {
+    enable: 'Enable Danmaku',
+    settings: 'Danmaku Settings',
+  },
+  settings: {
+    general: 'General',
+    playback: 'Playback',
+    audio: 'Audio',
+    video: 'Video',
+    subtitles: 'Subtitles',
+    ai: 'AI Settings',
+    danmaku: 'Danmaku',
+    about: 'About',
+  },
+  help: {
+    title: 'Help',
+    shortcuts: 'Shortcuts',
+    features: 'Features',
+  },
+};

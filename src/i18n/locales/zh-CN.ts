@@ -1,0 +1,57 @@
+export default {
+  app: {
+    title: 'ai-mplayer 智能播放器',
+  },
+  player: {
+    openFile: '打开文件',
+    openUrl: '打开URL',
+    play: '播放',
+    pause: '暂停',
+    stop: '停止',
+    volume: '音量',
+    fullscreen: '全屏',
+    settings: '设置',
+    help: '帮助',
+  },
+  subtitles: {
+    title: '字幕设置',
+    enable: '启用字幕',
+    track: '字幕轨',
+    external: '外挂字幕',
+    internal: '内置字幕',
+    asr: 'ASR字幕',
+    translation: '字幕翻译',
+    translateTo: '翻译至',
+  },
+  decoder: {
+    unsupportedFormat: '不支持的格式',
+    installDecoder: '安装解码器',
+    installPrompt: '检测到不支持的媒体格式，是否安装相应的解码器？',
+  },
+  ai: {
+    enhancement: 'AI增强',
+    asr: 'AI语音识别',
+    translation: 'AI翻译',
+    localModel: '本地模型',
+    cloudModel: '云端模型',
+  },
+  danmaku: {
+    enable: '开启弹幕',
+    settings: '弹幕设置',
+  },
+  settings: {
+    general: '常规',
+    playback: '播放',
+    audio: '音频',
+    video: '视频',
+    subtitles: '字幕',
+    ai: 'AI设置',
+    danmaku: '弹幕',
+    about: '关于',
+  },
+  help: {
+    title: '帮助',
+    shortcuts: '快捷键',
+    features: '功能说明',
+  },
+};

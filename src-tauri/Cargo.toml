@@ -1,0 +1,26 @@
+[package]
+name = "ai-mplayer"
+version = "1.0.0"
+description = "Windows 11 智能媒体播放器"
+authors = ["you"]
+license = ""
+repository = ""
+edition = "2021"
+
+[build-dependencies]
+tauri-build = { version = "2.0", features = [] }
+
+[dependencies]
+tauri = { version = "2.0", features = ["protocol-asset"] }
+tauri-plugin-dialog = "2.0"
+tauri-plugin-libmpv = "0.3"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+parking_lot = "0.12"
+anyhow = "1.0"
+base64 = "0.22"
+tauri-plugin-fs = "2.0"
+
+[features]
+default = ["custom-protocol"]
+custom-protocol = ["tauri/custom-protocol"]
