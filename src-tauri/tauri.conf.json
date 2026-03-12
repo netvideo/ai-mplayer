@@ -38,13 +38,36 @@
         "focus": true
       }
     ],
-"security": {
-        "csp": null,
-        "assetProtocol": {
-          "enable": true,
-          "scope": ["**"]
-        }
+    "security": {
+      "csp": {
+        "default-src": "'self'",
+        "img-src": "'self' asset: https:",
+        "media-src": "'self' asset:",
+        "script-src": "'self'",
+        "style-src": "'self' 'unsafe-inline'",
+        "connect-src": "'self' https:",
+        "font-src": "'self'",
+        "object-src": "'none'",
+        "frame-ancestors": "'none'",
+        "base-uri": "'self'",
+        "form-action": "'self'"
       },
+      "assetProtocol": {
+        "enable": true,
+        "scope": [
+          "$HOME/Videos/*",
+          "$HOME/Movies/*",
+          "$HOME/Music/*",
+          "$HOME/Desktop/*",
+          "$HOME/Downloads/*",
+          "$HOME/Documents/*",
+          "$DESKTOP/*",
+          "$DOCUMENTS/*",
+          "$DOWNLOADS/*",
+          "$VIDEO/*"
+        ]
+      }
+    },
     "withGlobalTauri": true
   },
   "plugins": {}

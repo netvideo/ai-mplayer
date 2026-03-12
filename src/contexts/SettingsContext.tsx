@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+import { createContext, useContext, useState, ReactNode } from 'react';
 
 interface HardwareInfo {
   cpu: { cores: number; speed: number };
@@ -83,6 +83,8 @@ export function SettingsProvider({ children }: { children: ReactNode }) {
 
   const detectHardware = async () => {
     try {
+      // Hardware detection should be done via Tauri backend
+      // For now, use browser APIs as fallback
       const cpu = { cores: navigator.hardwareConcurrency || 4, speed: 3.0 };
       const memory = { total: 16, available: 8 };
       const gpu = { model: 'Unknown', vram: 2 };

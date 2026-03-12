@@ -1,0 +1,52 @@
+Copyright (c) 2024 ai-mplayer contributors
+
+All rights reserved.
+
+This software is licensed under the MIT License.
+See LICENSE file for full license text.
+
+================================================================================
+COPYRIGHT NOTICE
+================================================================================
+
+The ai-mplayer project and its source code are copyright of their respective
+authors and contributors, as listed in the git commit history.
+
+This project includes code and assets from third parties, each with their own
+copyright and license terms. See THIRD_PARTY_LICENSES.md for details.
+
+================================================================================
+ATTRIBUTION
+================================================================================
+
+Core Development:
+- ai-mplayer contributors
+
+Third-Party Components:
+- libmpv: mpv/mplayer2 authors
+- Tauri Framework: Tauri Programme
+- React: Meta Platforms, Inc.
+- Tailwind CSS: Tailwind Labs, Inc.
+
+================================================================================
+TRADEMARK NOTICE
+================================================================================
+
+"ai-mplayer" is not a registered trademark. All other trademarks, logos, and
+service marks mentioned are the property of their respective owners.
+
+================================================================================
+DISCLAIMER
+================================================================================
+
+THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS
+OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.
+
+================================================================================
+CONTACT
+================================================================================
+
+For copyright inquiries, please contact:
+- Project Repository: https://github.com/[your-username]/ai-mplayer
+- Issues: https://github.com/[your-username]/ai-mplayer/issues

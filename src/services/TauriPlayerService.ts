@@ -165,7 +165,8 @@ async init(): Promise<void> {
         volume: ((volume as number) || 100) / 100,
         muted: (muted as boolean) || false,
       };
-    } catch {
+    } catch (error) {
+      console.error('Failed to get playback state:', error);
       return {
         isPlaying: false,
         position: 0,

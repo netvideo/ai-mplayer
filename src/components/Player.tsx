@@ -8,12 +8,21 @@ import HelpOverlay from './HelpOverlay';
 import { open } from '@tauri-apps/plugin-dialog';
 import { TauriPlayerService } from '../services/TauriPlayerService';
 
+const SEEK_STEP_SECONDS = 5;
+const VOLUME_STEP = 0.1;
+const MPV_INIT_DELAY_MS = 3000;
+
 const formatTime = (seconds: number): string => {
   if (!isFinite(seconds) || seconds < 0) return '00:00';
   const mins = Math.floor(seconds / 60);
   const secs = Math.floor(seconds % 60);
   return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
 };
+
+interface FileWithPath {
+  path?: string;
+  name?: string;
+}
 
 const Player = () => {
   const { settings } = useSettings();
@@ -56,8 +65,8 @@ const Player = () => {
       });
     };
 
-    // Delay to ensure MPV is initialized (3 seconds)
-    setTimeout(updateVideoRect, 3000);
+    // Delay to ensure MPV is initialized
+    setTimeout(updateVideoRect, MPV_INIT_DELAY_MS);
   }, []);
 
   const updateState = useCallback(async () => {
@@ -138,7 +147,7 @@ const Player = () => {
 
     if (e.dataTransfer.files && e.dataTransfer.files.length > 0) {
       const file = e.dataTransfer.files[0];
-      const filePath = (file as any).path;
+      const filePath = (file as FileWithPath).path;
       if (filePath) {
         await loadVideoFile(filePath);
       }
@@ -228,19 +237,19 @@ const Player = () => {
           break;
         case 'ArrowLeft':
           e.preventDefault();
-          await seek(Math.max(0, currentTime - 5));
+          await seek(Math.max(0, currentTime - SEEK_STEP_SECONDS));
           break;
         case 'ArrowRight':
           e.preventDefault();
-          await seek(Math.min(duration, currentTime + 5));
+          await seek(Math.min(duration, currentTime + SEEK_STEP_SECONDS));
           break;
         case 'ArrowUp':
           e.preventDefault();
-          await setVolume(Math.min(1, volume + 0.1));
+          await setVolume(Math.min(1, volume + VOLUME_STEP));
           break;
         case 'ArrowDown':
           e.preventDefault();
-          await setVolume(Math.max(0, volume - 0.1));
+          await setVolume(Math.max(0, volume - VOLUME_STEP));
           break;
         case 'KeyC':
           e.preventDefault();
